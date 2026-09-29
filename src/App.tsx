@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FacultySession } from './types';
 import { LoginSetupScreen } from './components/LoginSetupScreen';
 import { FacultyDashboard } from './components/FacultyDashboard';
+import { N8nChatWidget } from './components/N8nChatWidget';
 import { registerServiceWorker } from './services/swRegister';
 
 const SESSION_STORAGE_KEY = 'facultyflow_session';
@@ -64,17 +65,18 @@ export default function App() {
     );
   }
 
-  // If faculty session exists, open Dashboard directly without prompting for login
-  if (session) {
-    return (
-      <FacultyDashboard
-        session={session}
-        onLogout={handleLogout}
-        onUpdateSession={handleUpdateSession}
-      />
-    );
-  }
-
-  // Otherwise, render initial Setup/Login screen
-  return <LoginSetupScreen onLoginComplete={handleLoginComplete} />;
+  return (
+    <>
+      {session ? (
+        <FacultyDashboard
+          session={session}
+          onLogout={handleLogout}
+          onUpdateSession={handleUpdateSession}
+        />
+      ) : (
+        <LoginSetupScreen onLoginComplete={handleLoginComplete} />
+      )}
+      <N8nChatWidget />
+    </>
+  );
 }

@@ -15,7 +15,8 @@ import {
   Layers,
   Filter,
   CheckCircle,
-  Edit3
+  Edit3,
+  Bot
 } from 'lucide-react';
 import { FacultySession, TimetableEntry, DayOfWeek, AlertLogItem } from '../types';
 import { 
@@ -342,6 +343,15 @@ export const FacultyDashboard: React.FC<FacultyDashboardProps> = ({
               <Play className="w-3.5 h-3.5 fill-white" />
               <span>Simulate 5-Min Alert</span>
             </button>
+
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-n8n-chat'))}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white text-xs font-bold shadow-md shadow-purple-500/20 cursor-pointer transition border border-purple-400/30"
+              title="Chat with n8n AI Assistant"
+            >
+              <Bot className="w-3.5 h-3.5 text-white" />
+              <span>Ask AI Chatbot</span>
+            </button>
           </div>
         </div>
 
@@ -618,6 +628,14 @@ export const FacultyDashboard: React.FC<FacultyDashboardProps> = ({
               }`}
             >
               Alert Log ({logs.length})
+            </button>
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-n8n-chat'))}
+              className="px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1.5 text-purple-300 hover:text-white hover:bg-purple-900/30 border border-purple-500/30"
+              title="Open n8n AI Chatbot"
+            >
+              <Bot className="w-3.5 h-3.5 text-purple-400" />
+              <span>AI Chatbot</span>
             </button>
           </div>
 
