@@ -1,0 +1,6 @@
+{
+  "name": "FacultyFlow - Smart Faculty Timetable & Class Alerts",
+  "description": "Smart automated faculty timetable management and 5-minute pre-class push notification alert system with persistent device login.",
+  "requestFramePermissions": ["notifications"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

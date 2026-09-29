@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="128" fill="#2563EB"/>
+  <circle cx="256" cy="256" r="180" fill="url(#grad)" opacity="0.25"/>
+  <defs>
+    <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Bell & Clock icon combined -->
+  <path d="M256 128C203 128 160 171 160 224V288L128 336H384L352 288V224C352 171 309 128 256 128Z" fill="#FFFFFF"/>
+  <path d="M216 352C220 374 236 392 256 392C276 392 292 374 296 352H216Z" fill="#93C5FD"/>
+  <circle cx="256" cy="240" r="44" fill="#1E40AF"/>
+  <!-- Clock hands inside bell -->
+  <path d="M256 216V240L272 248" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 5-min alert wave ripples -->
+  <path d="M120 180C100 205 100 243 120 268" stroke="#93C5FD" stroke-width="12" stroke-linecap="round"/>
+  <path d="M392 180C412 205 412 243 392 268" stroke="#93C5FD" stroke-width="12" stroke-linecap="round"/>
+</svg>
